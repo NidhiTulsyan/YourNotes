@@ -1,16 +1,17 @@
 const express = require("express");
+const env = require('dotenv').config();
 const route = express.Router();
 const User = require("../models/userLogin");
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 const { body, validationResult } = require("express-validator");
-const JWT_SECRET = "hinidhikeepworkinghard";
+const JWT_SECRET = process.env.JWT_SECRET;
 const decodeToken = require("../middleware/decodeToken");
 
 route.get("/", (req, res) => {
   try {
-    console.log(req.body);
-  res.send("hello");
+    // console.log(req.body);
+  res.json("hello");
   } catch (error) {
     res.send(error)
   }
