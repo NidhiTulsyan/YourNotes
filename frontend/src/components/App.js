@@ -67,7 +67,7 @@ const deleteNote=async(id)=>{
     } 
   })
   const json = await response.json();
-  console.log("deleteing with id ",id);
+  console.log("deleteing with id ",id,json);
   setNotes(notes.filter((note)=>{
     return id!==note._id
   }))
@@ -84,7 +84,7 @@ console.log("id is",id);
     },
     body:JSON.stringify({title,description,tag})
   })
-  // const json = response.json();
+  console.log(response);
 
   const newNotes = JSON.parse(JSON.stringify(notes))
 
