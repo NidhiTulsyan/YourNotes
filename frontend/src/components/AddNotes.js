@@ -5,7 +5,7 @@ export default function AddNotes(props){
   const {showAlert} = props;
 
     const context = useContext(NoteContext);
-    const {notes,addNote} = context;
+    const {addNote} = context;
     const [note,setNote]=useState({title:"",description:"",tag:""})
 
     const handleClick=(e)=>{
