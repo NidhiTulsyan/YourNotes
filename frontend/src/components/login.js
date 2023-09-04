@@ -8,7 +8,7 @@ export default function Login(props) {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const response = await fetch(`http://localhost:5000/api/user/login`, {
+    const response = await fetch(`https://note-backend-65pz.onrender.com/api/user/login`, {
       method: "POST",
       headers: {
         "content-type": "application/json",
