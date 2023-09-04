@@ -8,7 +8,7 @@ const { body, validationResult } = require("express-validator");
 const JWT_SECRET = process.env.JWT_SECRET;
 const decodeToken = require("../middleware/decodeToken");
 
-route.get("/", (req, res) => {
+route.get("/hello", (req, res) => {
   try {
     // console.log(req.body);
   res.json("hello");

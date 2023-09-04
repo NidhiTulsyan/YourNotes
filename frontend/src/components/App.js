@@ -11,8 +11,8 @@ import Signup from "./signup";
 
 const NoteContext = createContext();
 export default function App() {
-  // let host = "http://localhost:5000"
-  let host = "https://note-backend-65pz.onrender.com/"
+  let host = "http://localhost:5000"
+  // let host = "https://note-backend-65pz.onrender.com/"
 const notesInitial = []
 const  [notes,setNotes]= useState(notesInitial);
 const [alert,setAlert] = useState(null)
