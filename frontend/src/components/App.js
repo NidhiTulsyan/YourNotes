@@ -30,7 +30,8 @@ const showAlert = (message,type)=>{
 //get all notes
 const getNote=async()=>{
   //todo api call
-  const response = await fetch(`${host}/api/notes/fetchnotes`,{
+  // const response = await fetch(`${host}/api/notes/fetchnotes`,{
+  const response = await fetch("https://note-backend-65pz.onrender.com/api/notes/fetchnotes",{
     method:'GET',
     headers:{
       'content-type':"application/json",
@@ -45,7 +46,8 @@ const getNote=async()=>{
 //Add a note
 const addNote=async(title,description,tag)=>{
   //todo api call
-  const response = await fetch(`${host}/api/notes/addnotes`,{
+  // const response = await fetch(`${host}/api/notes/addnotes`,{
+  const response = await fetch("https://note-backend-65pz.onrender.com/api/notes/addnotes",{
     method:'POST',
     headers:{
       'content-type':"application/json",
